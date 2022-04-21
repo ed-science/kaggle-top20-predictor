@@ -21,7 +21,7 @@ def to_s3(data):
                   'data': data}
 
     # Set filename
-    FILE_NAME = dt + "kaggle-survey-response-" + str(random.randrange(1, 100)) + ".json"
+    FILE_NAME = f"{dt}kaggle-survey-response-{str(random.randrange(1, 100))}.json"
 
     # dumps to str
     final_data = json.dumps(final_data, indent=4, ensure_ascii=False)

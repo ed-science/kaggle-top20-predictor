@@ -34,11 +34,9 @@ def lambda_handler(event, context):
 
     status_code = 200
 
-    response = {
+    return {
         "isBase64Encoded": False,
         "headers": {"Content-Type": "application/json"},
         "statusCode": status_code,
-        "body": json.dumps(r)
+        "body": json.dumps(r),
     }
-
-    return response
